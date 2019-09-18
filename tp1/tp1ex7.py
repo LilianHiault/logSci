@@ -19,4 +19,3 @@ def racines(a, b, c):
 print(racines(1, 1, -2))
 print(racines(4, -12, 9))
 print(racines(2, 1, 1))
-print("Hello world")
