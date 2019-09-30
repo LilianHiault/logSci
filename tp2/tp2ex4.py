@@ -23,7 +23,18 @@ def fibo(u):
 
 # Question 3
 def sommePairsFibo(n):
-    return n
+    somme = 0
+    a = 0
+    b = 1
+    #print("a =", a, "b =", b)
+    for i in range(2, n + 1):
+        c = a + b
+        a = b
+        b = c
+        #print("Fibonacci(", i, ") =", c)
+        if c % 2 == 0:
+            somme += c
+    return somme
 
 
 # Main
@@ -38,4 +49,4 @@ for i in range(n):
 
 # Question 3
 print("Somme des nombres pairs de la suite de Fibonacci jusqu'à n =",
-      n, " modulo 10 000 007 est :", sommePairsFibo(n))
+      n, " modulo 10 000 007 est :", sommePairsFibo(n) % 10000007)
