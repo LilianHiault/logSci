@@ -21,15 +21,16 @@ def code_mot(m):
 
 
 def decode_mot(L):
+    mot = " "
     for i in L:
-
-    return 0
+        mot = mot + decode_une(i)
+    return mot
 
 
 # Main
 # Question 1
-mot = input("Entrez un mot à coder : ")
-"""print("Code : ")
+"""mot = input("Entrez un mot à coder : ")
+print("Code : ")
 for i in mot:
     print(code_une(i))
 
@@ -38,6 +39,6 @@ code = eval(input("Code : "))
 print("Lettre correspondant à", code, ":", decode_une(code))"""
 
 # Question 3
-#motCode = input("Mot codé : ")
-print("Mot", mot, "codé :", code_mot(mot))
-#print("Mot ", motCode, "décodé :", decode_mot(motCode))
+# print("Mot", mot, "codé :", code_mot(mot))
+motCode = [2, 4, 18, 0, 17]
+print("Mot ", motCode, "décodé :", decode_mot(motCode))
