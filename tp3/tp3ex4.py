@@ -18,4 +18,4 @@ def euler(n):
 
 # Main
 nb = eval(input("Nombre : "))
-print("Euler(", nb, ") = ", euler(nb), sep = '')
+print("Euler(", nb, ") = ", euler(nb), sep='')

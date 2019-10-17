@@ -11,4 +11,4 @@ def harmonique(n):
 
 # Main
 n = eval(input("n = "))
-print("Harmonique(", n, ") = ", harmonique(n), sep = '')
+print("Harmonique(", n, ") = ", harmonique(n), sep='')

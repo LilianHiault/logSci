@@ -13,7 +13,7 @@ def affine(mot, a, b):
 # Question 3
 def inverse(a):
     inv = -1
-    for i in range(0,26):
+    for i in range(0, 26):
         if (i * a) % 26 == 1:
             inv = i
     return inv
