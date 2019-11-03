@@ -14,9 +14,8 @@ def t2s(n, x, y, c):
     else:
         t2s(n - 1, x, y, c / 2)
         t2s(n - 1, x + c / 2, y, c / 2)
-        t2s(n - 1, x + c / 4, y + ((np.sqrt(3) / 2) / 2**n), c / 2)
+        t2s(n - 1, x + c / 2, y + ((np.sqrt(3) / 2) / 2**n), c / 2)
         print()
-        # Remplacer les /4 et /2 par des /2**n ou /2**n-1 ?
 
 
 # Main
