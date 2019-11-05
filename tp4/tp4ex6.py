@@ -15,7 +15,7 @@ for i in range(1, n + 1):
     p2 = [(x[1] + x[2]) / 2, (y[1] + y[2]) / 2]
     p3 = [(x[2] + x[3]) / 2, (y[2] + y[3]) / 2]
 
-plt.title("Trianlges imbriqués")
+plt.title("Triangles imbriqués")
 # plt.axis("equal")
 plt.legend(loc=0)
 plt.show()
