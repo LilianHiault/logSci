@@ -9,19 +9,19 @@ def suiteLog(x, n):
     return xn
 
 
-"""def suiteLog2(y, n):
+def suiteLog2(y, n):
     if n >= 0:
         yn = y
         for i in range(n):
             yn = 4 * yn - 4 * yn**2
-    return yn"""
+    return yn
 
 
 x = sm.Float(0.23)
 nMax = 60
-print("Résultat de la suite pour x = ", x,
-      " et n = ", nMax, " : ", suiteLog(x, nMax).evalf(20))
+print("Résultat de la suite pour x =", x,
+      " et n =", nMax, ":", suiteLog(x, nMax).evalf(20))
 
-"""y = x
-print("Résultat de la suite pour y = ", y,
-      " et n = ", nMax, " : ", suiteLog2(y, nMax))"""
+y = x
+print("Résultat de la suite pour y =", y,
+      " et n =", nMax, ":", suiteLog2(y, nMax))
