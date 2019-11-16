@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from time import perf_counter
 
 # Lilian HIAULT et Tom LHÔPITAL
 # Exercice 1 repris après la séance de TP noté
@@ -51,6 +52,7 @@ print("Liste des diviseurs premiers de", m, "avec multiplicité (fonction récur
 x = []
 nbmoyfactprem = []
 
+t_start = perf_counter()
 
 for n in range(2, 10001): # Pour n allant  de 2 à 10000:
     x.append(n)
@@ -61,6 +63,8 @@ for n in range(2, 10001): # Pour n allant  de 2 à 10000:
 
     nbmoyfactprem.append((1 / (n - 1) * sum)) # On calcule le nombre moyen de facteurs premiers (avec multiplicité) jusqu'au rang n, que l'on stocke dans la liste nbmoyfactprem.
 
+t_end = perf_counter()
+print("\n3.\nTemps de calcul :", round(t_end - t_start, 2), "secondes")
 
 plt.plot(x, nbmoyfactprem, label = "n variant de 2 à 10000", color = "green")
 plt.xlim(2, 10000)
@@ -68,4 +72,5 @@ plt.xlim(2, 10000)
 plt.xticks([2, 250, 500, 1000, 1500, 2000, 3000, 4000, 5000, 7500, 10000])
 plt.title("Nombre moyen de facteurs premiers (avec multiplicité) jusqu'au rang n ≥ 2")
 plt.legend(loc = 0)
+plt.xkcd()
 plt.show()
