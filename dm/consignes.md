@@ -1,6 +1,6 @@
 # Consignes du devoir maison
 
-À rendre pour le 6 décembre 2019 (je suis sûr).
+À rendre pour le 6 décembre 2019 (je suis sûr maintenant).
 
 ## Exercice 17 :
 
