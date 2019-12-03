@@ -30,6 +30,10 @@ def popMoy(liste):
             nbVilles += 1
 
 
+def distPts(xa, ya, xb, yb):
+    return ((xb - xa)**2 + (yb - ya)**2)**(1/2)
+
+
 
 # Main
 
@@ -52,8 +56,8 @@ with open("villes.csv", encoding="utf-8") as fichier:
             nom.append(lCourante[1])
             alt.append(lCourante[2])
             post.append(lCourante[3])
-            long.append(lCourante[4])
-            lat.append(lCourante[5])
+            long.append(float(lCourante[4]))
+            lat.append(float(lCourante[5]))
             pop.append(lCourante[6])
             surface.append(lCourante[7])
 
@@ -62,5 +66,16 @@ with open("villes.csv", encoding="utf-8") as fichier:
 # Ville la plus au Nord
 print(nom[iMaxL(lat)], "est la ville la plus au Nord.")
 
-# Latitude médiane
+# Latitude et longitude médiane
 print("La latitude médiane est :", medLi(lat))
+print("La longitude médiane est :", medLi(long))
+
+# Commune médiane
+distMed = distPts(lat[0], medLi(lat), long[0], medLi(long))
+indice = 0
+for i in range(len(nom)):
+    if distPts(lat[i], medLi(lat), long[i], medLi(long)) < distMed:
+        distMed = distPts(lat[i], medLi(lat), long[i], medLi(long))
+        indice = i
+
+print("La ville la plus proche du point médian est ", nom[indice], "dont les coordonnées sont : ", long[indice], lat[indice])
