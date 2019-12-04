@@ -1,6 +1,7 @@
+import matplotlib.pyplot as plt
+
+
 # Fonctions
-
-
 def iMaxL(liste):
     max = liste[0]
     iMax = 0
@@ -58,7 +59,7 @@ with open("villes.csv", encoding="utf-8") as fichier:
             post.append(lCourante[3])
             long.append(float(lCourante[4]))
             lat.append(float(lCourante[5]))
-            pop.append(lCourante[6])
+            pop.append(int(lCourante[6]))
             surface.append(lCourante[7])
 
 # Analyse des résultats
@@ -79,3 +80,25 @@ for i in range(len(nom)):
         indice = i
 
 print("La ville la plus proche du point médian est ", nom[indice], "dont les coordonnées sont : ", long[indice], lat[indice])
+
+# Population des communes ayant entre 1000 et 20 000 habitants
+
+# Visualiser les communes de France
+latGr = []
+longGr = []
+latPet = []
+longPet = []
+for i in range(len(nom)):
+    if pop[i] > 100000:
+        latGr.append(lat[i])
+        longGr.append(long[i])
+    else:
+        latPet.append(lat[i])
+        longPet.append(long[i])
+
+plt.plot(longPet, latPet, '.', color = 'b')
+plt.plot(longGr, latGr, '.', color = 'r', markersize = 5)
+plt.legend(loc=0)
+plt.title("Communes de France")
+plt.axis("equal")
+plt.show()
