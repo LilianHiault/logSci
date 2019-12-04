@@ -15,6 +15,6 @@ for i in range(2014):
         nb //= 10
     if (i + prod) == 2014:
         somme += i
-        print(i)
+        # print(i)
 
 print("La somme des nombres qui donnent 2014 lorsqu'on leur ajoute le produit de leurs chiffres est : ", somme)
