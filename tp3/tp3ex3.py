@@ -56,11 +56,13 @@ print(mot, "crypté :", motCrypt)
 print(motCrypt, "déchiffré est :", de_affine(motCrypt, a, b))"""
 
 # Question 6
-motCode = "KYBIX"
+"""motCode = "KYBIX"
 
 for a in ensA:
     for b in range(11):
         print(motCode, "décodé :", de_affine(motCode, a, b))
-    print("")
+    print("")"""
+
+print(de_affine("QSZR", 21, 4))
 
 # print("Hello world!", sep = '', end = '')
