@@ -33,4 +33,8 @@ for i in range(20000):
 print("Probabilité que le nombre de pile soit supérieur à 53 :", sup/20000)
 print("Probabilité qu'il soit inférieur ou égal à 40 :", inf/20000)
 
-plt.
+plt.bar(0.5, sup/20000, 1 , color = 'r', label = 'Supérieur à 53', alpha = 0.5)
+plt.bar(2.5, inf/20000, 1, color = 'b', label = 'Inférieur ou égal à 40', alpha = 0.5)
+plt.title("Nombre de 'pile' obtenus sur 100 lancés" )
+plt.legend(loc=0)
+plt.show()

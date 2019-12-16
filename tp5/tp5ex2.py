@@ -1,6 +1,7 @@
 import sympy as sm
 
 
+# Fonctions
 def suiteLog(x, n):
     if n >= 0:
         xn = x
@@ -17,6 +18,7 @@ def suiteLog2(y, n):
     return yn
 
 
+# Main
 x = sm.Float(0.23)
 nMax = 60
 print("Résultat de la suite pour x =", x,
